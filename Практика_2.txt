@@ -1,0 +1,32 @@
+Задание 1
+userInputNumber=float(input('введите число'))
+if userInputNumber % 2 == 0:
+    print('чётное')
+else: print('нечётное')
+
+Задание 2
+userInputTemp=float(input('введите градусы Цельсия'))
+x=userInputTemp*1.8+32
+print('Температура в градусах Фаренгейта: ', round(x, 1))
+
+Задание 3
+userInputNumber = int(input('Введите число: '))
+if userInputNumber % 5 != 0 and userInputNumber % 7 != 0:
+    print('00')
+elif userInputNumber % 5 == 0 and userInputNumber % 7 != 0:
+    print('01')
+elif userInputNumber % 5 != 0 and userInputNumber % 7 == 0:
+    print('10')
+elif userInputNumber % 5 == 0 and userInputNumber % 7 == 0:
+    print('11')
+
+Задание 4
+a = float(input('введите старший коэф.: '))
+b = float(input('введите коэф. при x: '))
+c = float(input('введите свободный член: '))
+D = b**2 - 4*a*c
+if D<0: print('Корней нет')
+else:
+    x = float((-b+D**(1/2))/(2*a))
+    y = float((-b-D**(1/2))/(2*a))
+print(x, ' ', y)
