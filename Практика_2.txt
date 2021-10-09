@@ -30,3 +30,18 @@ else:
     x = float((-b+D**(1/2))/(2*a))
     y = float((-b-D**(1/2))/(2*a))
 print(x, ' ', y)
+
+Задание 5
+import random
+n = random.randint(1, 10)
+k = int(input('введите количество попыток: '))
+while k != 0:
+    x = int(input('отгадайте число '))
+    if x == n:
+        print('Вы угадали')
+        break
+    elif x > n: print("больше")
+    elif x < n: print("меньше")
+    k=k-1
+if k == 0:
+    print("Попытки кончились. YOU WILL NEVER WIN")
