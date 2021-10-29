@@ -1,0 +1,32 @@
+Задача 1
+def spisok(l,n):
+    answer=[]
+    for i in l:
+        if int(i) > n:
+            answer.append(i)
+    return answer
+x=input().split(' ')
+n=int(input())
+print(spisok(x,n))
+
+Задача 3
+def initials(str):
+    answer=''
+    for i in str:
+        if (i.isupper()):
+            answer+=i+'.'
+    return answer
+print(initials(input()))
+
+Задача 6
+def freq(word):
+    count = 0
+    ans=''
+    for i in word:
+        if(count < word.count(i)):
+            count=word.count(i)
+            ans=i
+    return ans
+
+word = input('Введите слово: ')
+print(freq(word))
