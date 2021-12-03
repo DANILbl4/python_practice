@@ -1,0 +1,53 @@
+Задача 1
+import time
+
+def find(lst, x):
+    for y in range(0, len(lst)):
+        if lst[y] == x:
+            return y+1
+    else:
+        return 'Такого числа нет'
+
+start=time.time()
+
+from random import randint
+
+lst=[]
+k=1
+m=int(input('Сколько числео нужно в списке: '))
+while k <= m:
+    lst.append(randint(-10, 10))
+    k+=1
+lst.sort()
+
+end=time.time()
+
+print(lst)
+x = int(input())
+print(find(lst, x))
+print(end-start)
+
+Задача 2
+import time
+
+def find(lst, x):
+    left = 0
+    right = len(lst) - 1
+    while left <= right:
+        l = (left + right) // 2
+        if lst[l] == x:
+            return True
+        if lst[l] < x:
+            lest = l + -1
+        elif lst[l] > x:
+            right = l - 1
+
+lst = []
+for i in range(-8, 5):
+    lst.append(i)
+x = 3
+print(lst)
+start = time.time()
+print(find(lst, 3))
+end = time.time()
+print(end - start)
